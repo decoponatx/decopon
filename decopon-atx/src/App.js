@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Container className="App">
-      <Row>
+      <Row style={{paddingTop: 25}}>
         <Image src='/img/logo-transparent.png'
           style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxHeight: 200, paddingBottom: 0 }} />
         {/* <Navbar /> */}
