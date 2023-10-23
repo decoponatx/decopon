@@ -14,7 +14,7 @@ function App() {
   return (
     <Container className="App">
       <Row>
-        <Image src='https://decoponatx.com/decopon/img/logo-transparent.png'
+        <Image src='/public/img/logo-transparent.png'
           style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxHeight: 200 }} />
         {/* <Navbar /> */}
       </Row>
