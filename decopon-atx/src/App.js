@@ -14,8 +14,8 @@ function App() {
   return (
     <Container className="App">
       <Row>
-        <Image src='/public/img/logo-transparent.png'
-          style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxHeight: 200 }} />
+        <Image src='/img/logo-transparent.png'
+          style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxHeight: 200, paddingBottom: 0 }} />
         {/* <Navbar /> */}
       </Row>
       
