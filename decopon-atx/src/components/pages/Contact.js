@@ -4,7 +4,7 @@ function Contact() {
     return (
         <div className='component'>
             <div className='title'>
-                <h1>Contact Us</h1>
+                <h1 className='subtitle'>Contact Us</h1>
             </div>
             <div className='contact'>
                 Get ready to unleash your creativity with Decopon (deh-koh-pon)! Explore our decoden kits for a unique DIY adventure at home or join us in person at your local craft fair. Additionally, we provide birthday packages for special celebrations.
