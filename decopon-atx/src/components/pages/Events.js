@@ -5,7 +5,7 @@ const EventCalendar = () => {
     <>
     <div className="component">
       <div className="title">
-        <h1>Events</h1>
+        <h1 className='subtitle'>Events</h1>
       </div>
       <div className="event">
         <h2>TBD</h2>
