@@ -5,11 +5,9 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import EventCalendar from './components/pages/Events';
 import Contact from './components/pages/Contact';
-import SocialMediaHandles from './components/social/Handles';
 
 function App() {
-  const tiktokHandle = 'decoponatx';
-  const instagramHandle = 'decoponatx';
+
 
   return (
     <Container className="App">
@@ -25,11 +23,7 @@ function App() {
       <div>
         <Contact></Contact>
       </div>
-      <div>
-      <SocialMediaHandles
-          tiktokHandle={tiktokHandle}
-          instagramHandle={instagramHandle}></SocialMediaHandles>
-      </div>
+  
       <footer>
       <div className="copyright">
         <p>&copy; {new Date().getFullYear()} Decopon LLC. All rights reserved.</p>

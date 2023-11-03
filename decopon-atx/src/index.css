@@ -40,15 +40,15 @@ code {
 }
 
 .event {
-  background-color: #FFC995;
-  color: #fff;
+  background-color: #F9EAD7;
+  color: #000000;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
 }
 
 .contact {
-  background-color: #FFFFFF;
+  background-color: #F9EAD7;
   color: #000000;
   padding: 10px;
   margin: 10px 0;
@@ -62,4 +62,19 @@ code {
 
 .subtitle {
   margin-top: 8px;
+}
+
+a {
+  color: inherit;
+}
+
+.eventDate {
+  font-family: 'SlowRiver', sans-serif;
+  background-color: #FFC995;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  margin-top: 0;
+  border-radius: 5px;
 }
