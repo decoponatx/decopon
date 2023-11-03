@@ -16,7 +16,12 @@ function App() {
           style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxHeight: 200, paddingBottom: 0 }} />
         {/* <Navbar /> */}
       </Row>
-      
+      <div className='component'>
+        <div className='title'>
+          <h1 className='subtitle'>Shop</h1>
+        </div>
+        <div className='content'>COMING SOON!</div>
+      </div>
       <div>
         <EventCalendar></EventCalendar>
       </div>

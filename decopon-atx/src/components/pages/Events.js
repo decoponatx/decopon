@@ -9,7 +9,7 @@ const EventCalendar = () => {
         <div className="title">
           <h1 className='subtitle'>Events</h1>
         </div>
-        <div className="event">
+        <div className="content">
           <h2 className='eventDate'>Saturday December 2, 2023</h2>
           {/* <p>Find us at our inaugural event at the <a href='https://www.hillcountrygalleria.com/event/holiday-arts-market/2145576115' target='_blank'>Bee Cave Holiday Arts Market</a> happening at the Hill Country Galleria. Try your hand at our in-person decoden magic and explore our adorable holiday kits. As a bonus, all in-person decoden will have unlimited access to our charm bar and a special Holiday Market discount for additional kits!</p>
           <br></br> */}
@@ -33,7 +33,7 @@ const EventCalendar = () => {
             ></add-to-calendar-button>
           </Center>
         </div>
-        <div className="event">
+        <div className="content">
           <h2 className='eventDate'>Saturday December 16, 2023</h2>
           {/* <p>We're back again at the <a href='https://www.hillcountrygalleria.com/event/holiday-arts-market/2145576115' target='_blank'>Bee Cave Holiday Arts Market</a> happening at the Hill Country Galleria. We will have all of our kits available for in-person decoden. As a bonus, all in-person decoden will have unlimited access to our charm bar and a special Holiday Market discount for additional kits purchased. Our kits will make lovely holiday presents too!</p>
           <br></br> */}
@@ -57,7 +57,7 @@ const EventCalendar = () => {
           ></add-to-calendar-button>
           </Center>
         </div>
-        <div className="event">
+        <div className="content">
           <h2 className='eventDate'>Saturday December 23, 2023</h2>
           {/* <p>Our last event of the year will be at the <a href='https://www.hillcountrygalleria.com/event/holiday-arts-market/2145576115' target='_blank'>Bee Cave Holiday Arts Market</a> happening at the Hill Country Galleria. This will be your last chance to grab your last minute holiday gifts! You will also be able to experience in-person decoden with our unlimited charm bar. Hope to see you there!</p>
           <br></br> */}

@@ -39,15 +39,7 @@ code {
   letter-spacing: 2px;
 }
 
-.event {
-  background-color: #F9EAD7;
-  color: #000000;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-}
-
-.contact {
+.content {
   background-color: #F9EAD7;
   color: #000000;
   padding: 10px;
