@@ -69,6 +69,7 @@ a {
   margin: 10px 0;
   margin-top: 0;
   border-radius: 5px;
+  font-size: 2vw;
 }
 
 .eventDetails{
@@ -92,4 +93,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+
+  }
 }

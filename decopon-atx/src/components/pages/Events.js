@@ -17,7 +17,7 @@ const EventCalendar = () => {
         </Col>
         {data.map((row) => (
           <Row className="content" key={row.id}>
-              <h2 className='eventDate'>{row.eventDate}</h2>
+              <span className='eventDate'>{row.eventDate}</span>
             <Row className='eventDetails'>
               <Col xs={6}>
                 <Image className='eventPhoto' src={row.eventPhoto}></Image>
