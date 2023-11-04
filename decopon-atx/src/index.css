@@ -70,3 +70,26 @@ a {
   margin-top: 0;
   border-radius: 5px;
 }
+
+.eventDetails{
+  margin-bottom: 10px;
+}
+
+.eventPhoto {
+  max-width: inherit;
+  border: 1px solid;
+}
+
+.eventWeb {
+  font-size: x-small;
+}
+
+.announcement {
+  background-color: #FEA751;
+  color: white;
+  font-family: 'SlowRiver', sans-serif;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

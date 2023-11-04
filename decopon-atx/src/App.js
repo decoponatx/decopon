@@ -6,36 +6,27 @@ import Container from 'react-bootstrap/Container';
 import EventCalendar from './components/pages/Events';
 import Contact from './components/pages/Contact';
 
+
 function App() {
-
-
   return (
-    <Container className="App">
-      <Row style={{paddingTop: 25}}>
-        <Image src='/img/logo-transparent.png'
-          style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxHeight: 200, paddingBottom: 0 }} />
-        {/* <Navbar /> */}
-      </Row>
-      <div className='component'>
-        <div className='title'>
-          <h1 className='subtitle'>Shop</h1>
-        </div>
-        <div className='content'>COMING SOON!</div>
-      </div>
-      <div>
+    <>
+      <Container fluid className="App">
+        <Row style={{ paddingTop: 25, paddingBottom: 25}}>
+          <Image src='/img/logo-transparent.png'
+            style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: 250, paddingBottom: 0 }} />
+        </Row>
+        <Row className='announcement'>
+          Online Shop Coming Soon!
+        </Row>
         <EventCalendar></EventCalendar>
-      </div>
-      <div>
         <Contact></Contact>
-      </div>
-  
-      <footer>
-      <div className="copyright">
-        <p>&copy; {new Date().getFullYear()} Decopon LLC. All rights reserved.</p>
-      </div>
-    </footer>
-
-    </Container>
+        <footer>
+          <Row className="copyright">
+            <p>&copy; {new Date().getFullYear()} Decopon LLC. All rights reserved.</p>
+          </Row>
+        </footer>
+      </Container>
+    </>
   );
 }
 
