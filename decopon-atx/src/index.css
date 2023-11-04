@@ -69,7 +69,6 @@ a {
   margin: 10px 0;
   margin-top: 0;
   border-radius: 5px;
-  font-size: 2vw;
 }
 
 .eventDetails{
@@ -95,8 +94,14 @@ a {
   align-items: center;
 }
 
-@media screen and (max-width: 480px) {
-  h2 {
+@media screen and (min-width: 501px) {
+  .eventDate {
+    font-size: x-large;
+  }
+}
 
+@media screen and (max-width: 500px) {
+  div.example {
+    font-size: large;
   }
 }
