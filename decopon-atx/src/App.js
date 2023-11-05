@@ -22,7 +22,10 @@ function App() {
         <Contact></Contact>
         <footer>
           <Row className="copyright">
-            <p>&copy; {new Date().getFullYear()} Decopon LLC. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Decopon LLC. All rights reserved.
+            <br></br>
+            <a style={{fontSize: 'x-small'}} href='https://www.freeprivacypolicy.com/live/15f3f5eb-2fe2-46e4-85db-81c5c4df69df' target='_blank' rel='noreferrer'>Privacy Policy</a>
+            </p>
           </Row>
         </footer>
       </Container>

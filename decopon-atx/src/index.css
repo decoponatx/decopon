@@ -64,14 +64,14 @@ a {
   font-family: 'SlowRiver', sans-serif;
   background-color: #FFC995;
   text-align: center;
-  color: #fff;
+  color: #000;
   padding: 10px;
   margin: 10px 0;
   margin-top: 0;
   border-radius: 5px;
 }
 
-.eventDetails{
+.webEventDetails{
   margin-bottom: 10px;
 }
 
@@ -95,13 +95,32 @@ a {
 }
 
 @media screen and (min-width: 501px) {
+  .mobileEventDetails {
+    display: none !important;
+  }
+  .webEventDetails {
+    display: flex;
+  }
   .eventDate {
     font-size: x-large;
   }
 }
 
 @media screen and (max-width: 500px) {
-  div.example {
+  .mobileEventDetails {
+    display: block !important;
+  }
+  .webEventDetails {
+    display: none;
+  }
+  .eventDate {
     font-size: large;
   }
+}
+
+.mobileEventDetails {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
