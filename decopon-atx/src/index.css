@@ -124,3 +124,29 @@ a {
   align-items: center;
   margin: auto;
 }
+
+.button {
+  background-color: #FEA751; 
+  border: none; 
+  color: #461F22; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 14px; 
+  margin: 4px 2px; 
+  cursor: pointer;
+  border-radius: 8px;
+  width: inherit;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+}
+
+.button:active {
+  transform: translateY(4px); /* Pushes the button down a bit */
+}
