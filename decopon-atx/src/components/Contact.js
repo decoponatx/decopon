@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialMediaHandles from '../social/Handles';
+import SocialMediaHandles from './social/Handles';
 
 function Contact() {
     const tiktokHandle = 'decoponatx';
