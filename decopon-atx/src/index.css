@@ -150,3 +150,14 @@ a {
 .button:active {
   transform: translateY(4px); /* Pushes the button down a bit */
 }
+
+.subComponent {
+  font-family: 'SlowRiver', sans-serif;
+  background-color: #FFC995;
+  text-align: center;
+  color: #000;
+  padding: 10px;
+  margin: 10px 0;
+  margin-top: 0;
+  border-radius: 5px;
+}
