@@ -20,7 +20,7 @@ const Instructions = () => {
             <br></br><br></br>
             <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>Product Use Warning</strong>
             <br></br>
-            This product is for external use only. Do not ingest or consume. Ingestion may cause serious harm.
+            All products are for external use only. Do not ingest or consume. Ingestion may cause serious harm.
           </p>
         </div>
         <div id='iStep2'>
@@ -44,7 +44,7 @@ const Instructions = () => {
         <div id='iStep4'>
           <div className='subComponent'>Step 4 - Begin Decoden!</div>
           <p className='content'>
-            Practice makes perfect. Use the back of the postcard provided as your practice canvas. Here, you can try out a few test applications to master the right amount of pressure needed for that flawless frosting flow. Remember, the key is to grip the top of the piping bag and gently squeeze downwards.
+            Practice makes perfect. Use the back of the postcard provided as your sample canvas. Here, you can try out a few test applications to master the right amount of pressure needed for that flawless frosting flow. Remember, the key is to grip the top of the piping bag and gently squeeze downwards.
             <br></br><br></br>
             Once you feel confident with how the frosting behaves, you're all set to start adorning your item! There's no incorrect way to do this – let your creativity soar. The frosting also acts as an adhesive, so simply place your charms on the frosting to affix them beautifully to your decoden piece.
             <br></br><br></br>
@@ -54,7 +54,7 @@ const Instructions = () => {
         <div id='iStep5'>
           <div className='subComponent'>Step 5 - Let it Cure</div>
           <p className='content'>
-            Finished your creation? Great! The drying time depends on for your frosting thickness – it usually requires around a day or more to fully cure. Place your newly crafted masterpiece in a low-traffic area and let it sit undisturbed overnight. To test if it's ready, gently press a charm. If it shifts, it needs more time to set. If it stays put, your decoden item is all set and ready to show off!
+            Finished your creation? Great! The drying time depends on for your frosting thickness – it usually requires around a day or more to fully cure. Place your newly crafted masterpiece in a low-traffic area and let it sit undisturbed overnight. To test if it's ready, gently press on a charm. If it shifts, it needs more time to set. If it stays put, your decoden item is all set and ready to show off!
           </p>
         </div>
         <div id='tips'>
@@ -64,7 +64,7 @@ const Instructions = () => {
               <li><strong>Plan your design:</strong> Before you start, have a clear idea of your design. Sketch it out or lay your charms on your item to see how they fit. This helps in avoiding mistakes and ensures a cohesive look.</li>
               <li><strong>Start simple:</strong> Need some inspiration? A great way to begin is by keeping it simple. Try starting with a basic border around your item and play around with the placement of charms. As you progress with your project, you'll find that more creative ideas naturally flow.</li>
               <li><strong>Decorate anything:</strong> When you've completed your first project, you might find yourself with some extra cream or charms. Look around your home for objects that could be enhanced with a bit of decoden – the possibilities are endless!</li>
-              <li><strong>Store the extras: </strong>If you want to save the cream for later, start by removing the outer bag and cleaning off any leftover cream. Gently remove the tip and set it aside to dry. In a few days, use a toothpick to clear out any dried cream from the tip. To store your extra charms, ensure they are kept in a secure location. The packaging included is perfect for this purpose. For storing the cream bag, place it back into the outer bag and then seal it in a ziplock bag. Store it away from heat, and you'll be able to reuse it later - just follow the instructions from step 3.</li>
+              <li><strong>Store the extras: </strong>If you want to save the cream for later, start by removing the outer bag and cleaning off any leftover cream. Gently remove the tip, scrape out any excess cream with a toothpick, and set it aside to dry. In a few days, use a toothpick to clear out any dried cream from the tip. To store your extra charms, ensure they are kept in a secure location. The packaging included is perfect for this purpose. For storing the cream bag, place it back into the outer bag and then seal it in a ziplock bag. Store it away from heat, and you'll be able to reuse it later - just follow the instructions from step 3.</li>
             </ul>
           </p>
         </div>
