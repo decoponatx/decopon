@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <Container fluid className="App">
         <Row style={{ paddingTop: 25, paddingBottom: 25 }}>
-          <a href='https://decoponatx.myshopify.com/' target='_blank' rel='decopon'>
+          <a href='https://shop.decoponatx.com/' target='_blank' rel='decopon'>
           <Image src='/img/logo-transparent.png'
             style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: 250, paddingBottom: 0 }} /></a>
         </Row>
