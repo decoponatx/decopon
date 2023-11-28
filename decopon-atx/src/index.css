@@ -92,6 +92,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: xx-large;
 }
 
 @media screen and (min-width: 501px) {
@@ -161,3 +163,4 @@ a {
   margin-top: 0;
   border-radius: 5px;
 }
+

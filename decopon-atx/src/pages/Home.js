@@ -4,18 +4,21 @@ import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import EventCalendar from '../components/Events';
 import Contact from '../components/Contact';
+import News from '../components/News';
 
 const Home = () => {
   return (
     <>
       <Container fluid className="App">
         <Row style={{ paddingTop: 25, paddingBottom: 25 }}>
+          <a href='https://decoponatx.myshopify.com/' target='_blank' rel='decopon'>
           <Image src='/img/logo-transparent.png'
-            style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: 250, paddingBottom: 0 }} />
+            style={{ display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: 250, paddingBottom: 0 }} /></a>
         </Row>
         <Row className='announcement'>
-          Online Shop Coming Soon!
+          <a href='https://shop.decoponatx.com/' target='_blank' rel='decopon'>--&gt;SHOP NOW OPEN!&lt;-- </a>
         </Row>
+        <News></News>
         <EventCalendar></EventCalendar>
         <Contact></Contact>
         <footer>
