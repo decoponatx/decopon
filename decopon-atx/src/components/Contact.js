@@ -1,10 +1,13 @@
 import React from 'react';
 import SocialMediaHandles from './social/Handles';
+import { Container } from 'react-bootstrap';
+
 
 function Contact() {
     const tiktokHandle = 'decoponatx';
     const instagramHandle = 'decoponatx';
     return (
+        <Container>
         <div className='component'>
             <div className='title'>
                 <h1 className='subtitle'>Contact Us</h1>
@@ -23,6 +26,7 @@ function Contact() {
           instagramHandle={instagramHandle}></SocialMediaHandles>
             </div>
         </div>
+        </Container>
     );
 }
 

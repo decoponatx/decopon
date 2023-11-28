@@ -1,18 +1,17 @@
 import React from 'react';
-import { Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 
 const NewsItem = ({ title, description, date }) => (
-  <Row className='webEventDetails'>
+  <Row className='eventDetails'>
     <div>
       <h2 className='eventDate'>{date}</h2>
-      <p className='eventName'>
-      </p>
       <p dangerouslySetInnerHTML={{ __html: description }} />
     </div>
   </Row>
 );
 
 function News() {
+
   const newsData = [
     {
       title: 'Shop is now OPEN!',
@@ -21,30 +20,31 @@ function News() {
       date: 'November 27, 2023',
     },
     {
-        title: 'Come visit us!',
-        description: 
+      title: 'Come visit us!',
+      description:
         'As December nears, so does the excitement of our holiday market events! Get ready to join us at the Bee Cave Hill Country Galleria. We will be located in the main plaza near the skating rink. <br></br>For those who want to decoden at the market, we are offering discounted rates on select items. Plus, a little reminder: sign up for our newsletter by December 2 to snag a 20% off discount for your market purchases!',
-        date: 'November 25, 2023'
-
+      date: 'November 25, 2023',
     },
   ];
 
   return (
-    <div className='component'>
-      <div className='title'>
-        <h1 className='subtitle'>News and Updates</h1>
-      </div>
-      <div className='content'>
-        {newsData.map((item, index) => (
-          <NewsItem
-            key={index}
-            title={item.title}
-            description={item.description}
-            date={item.date}
-          />
-        ))}
-      </div>
-    </div>
+    <Container>
+      <Row className='component'>
+        <div className='title'>
+          <h1 className='subtitle'>News and Updates</h1>
+        </div>
+        <div className='content'>
+          {newsData.map((item, index) => (
+            <NewsItem
+              key={index}
+              title={item.title}
+              description={item.description}
+              date={item.date}
+            />
+          ))}
+        </div>
+      </Row>
+    </Container>
   );
 }
 

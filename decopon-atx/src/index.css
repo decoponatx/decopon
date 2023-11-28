@@ -75,6 +75,10 @@ a {
   margin-bottom: 10px;
 }
 
+.eventDetails{
+  margin-bottom: 5px;
+}
+
 .eventPhoto {
   max-width: inherit;
   border: 1px solid;
@@ -164,3 +168,6 @@ a {
   border-radius: 5px;
 }
 
+.navbar {
+  font-family: 'SlowRiver', sans-serif;
+}
