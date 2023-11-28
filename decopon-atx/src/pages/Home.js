@@ -18,42 +18,41 @@ const Home = () => {
   return (
     <>
       <Navbar expand="false" style={{ backgroundColor: '#492C28' }} variant="dark" sticky="top" onToggle={handleToggle} expanded={expanded}>
-      <Container>
-        <Navbar.Toggle style={{ marginLeft: 'auto', border: 'none' }} aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto" style={{textAlign: 'right', marginRight:'3em'}}>
-            <Nav.Link href='https://shop.decoponatx.com' target='_blank' rel='noreferrer' onClick={closeMenu}>
-              SHOP!
-            </Nav.Link>
-            <Nav.Link as={Link} to="news" smooth={false} onClick={closeMenu}>
-              News and Updates
-            </Nav.Link>
-            <Nav.Link as={Link} to="events" smooth={false} onClick={closeMenu}>
-              Events
-            </Nav.Link>
-            <Nav.Link as={Link} to="contact" smooth={false} onClick={closeMenu}>
-              Contact Us
-            </Nav.Link>
-            <Nav.Link as={Link} to="top" smooth={false} onClick={closeMenu}>
-              <i className="fas fa-arrow-up"></i> Back to Top
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-
+        <Container>
+          <Navbar.Toggle style={{ marginLeft: 'auto', border: 'none' }} aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ml-auto" style={{ textAlign: 'right', marginRight: '3em' }}>
+              <Nav.Link href='https://shop.decoponatx.com' target='_blank' rel='noreferrer' onClick={closeMenu}>
+                SHOP!
+              </Nav.Link>
+              <Nav.Link as={Link} to="news" smooth={false} offset={-200} onClick={closeMenu}>
+                News and Updates
+              </Nav.Link>
+              <Nav.Link as={Link} to="events" smooth={false} offset={-200} onClick={closeMenu}>
+                Events
+              </Nav.Link>
+              <Nav.Link as={Link} to="contact" smooth={false} offset={-200} onClick={closeMenu}>
+                Contact Us
+              </Nav.Link>
+              <Nav.Link as={Link} to="top" smooth={false} offset={-500} onClick={closeMenu}>
+                <i className="fas fa-arrow-up"></i> Back to Top
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <Container fluid className="App">
-        <Row id="top" style={{ paddingTop: 25, paddingBottom: 25 }}>
-            <Image
-              src="/img/logo-transparent.png"
-              style={{
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                maxWidth: 250,
-                paddingBottom: 0,
-              }}
-            />
+        <Row id='top' style={{ paddingTop: 25, paddingBottom: 25 }}>
+          <Image
+            src="/img/logo-transparent.png"
+            style={{
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              maxWidth: 250,
+              paddingBottom: 0,
+            }}
+          />
         </Row>
         <Row className="announcement">
           <a href="https://shop.decoponatx.com/" target="_blank" rel="noreferrer">
