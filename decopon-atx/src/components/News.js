@@ -6,7 +6,6 @@ const NewsItem = ({ title, description, date }) => (
     <div>
       <h2 className='eventDate'>{date}</h2>
       <p className='eventName'>
-        <strong>{title}</strong>
       </p>
       <p dangerouslySetInnerHTML={{ __html: description }} />
     </div>
