@@ -13,39 +13,37 @@ const Home = () => {
   const [expanded, setExpanded] = useState(false);
 
   const handleToggle = () => setExpanded(!expanded);
-
   const closeMenu = () => setExpanded(false);
 
   return (
     <>
-      <Navbar expand="false" style={{ backgroundColor: '#492C28' }} variant="dark" sticky="top">
-        <Container>
-          <Navbar.Toggle style={{ marginLeft: 'auto', border: 'none' }} aria-controls="responsive-navbar-nav" onClick={handleToggle} />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ml-auto" onClick={closeMenu}>
-            <Nav.Link href='https://shop.decoponatx.com' target='_blank' rel='noreferrer'>
-                SHOP!
-              </Nav.Link>
-              <Nav.Link as={Link} to="news" smooth={false}>
-                News and Updates
-              </Nav.Link>
-              <Nav.Link as={Link} to="events" smooth={false}>
-                Events
-              </Nav.Link>
-              <Nav.Link as={Link} to="contact" smooth={false}>
-                Contact Us
-              </Nav.Link>
-              <Nav.Link as={Link} to="top" smooth={false}>
-              <i class="fas fa-arrow-up"></i> Back to Top
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <Navbar expand="false" style={{ backgroundColor: '#492C28' }} variant="dark" sticky="top" onToggle={handleToggle} expanded={expanded}>
+      <Container>
+        <Navbar.Toggle style={{ marginLeft: 'auto', border: 'none' }} aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ml-auto" style={{textAlign: 'right', marginRight:'3em'}}>
+            <Nav.Link href='https://shop.decoponatx.com' target='_blank' rel='noreferrer' onClick={closeMenu}>
+              SHOP!
+            </Nav.Link>
+            <Nav.Link as={Link} to="news" smooth={false} onClick={closeMenu}>
+              News and Updates
+            </Nav.Link>
+            <Nav.Link as={Link} to="events" smooth={false} onClick={closeMenu}>
+              Events
+            </Nav.Link>
+            <Nav.Link as={Link} to="contact" smooth={false} onClick={closeMenu}>
+              Contact Us
+            </Nav.Link>
+            <Nav.Link as={Link} to="top" smooth={false} onClick={closeMenu}>
+              <i className="fas fa-arrow-up"></i> Back to Top
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
 
       <Container fluid className="App">
         <Row id="top" style={{ paddingTop: 25, paddingBottom: 25 }}>
-          <a href="https://shop.decoponatx.com/" target="_blank" rel="noreferrer">
             <Image
               src="/img/logo-transparent.png"
               style={{
@@ -56,7 +54,6 @@ const Home = () => {
                 paddingBottom: 0,
               }}
             />
-          </a>
         </Row>
         <Row className="announcement">
           <a href="https://shop.decoponatx.com/" target="_blank" rel="noreferrer">

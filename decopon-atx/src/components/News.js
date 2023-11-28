@@ -22,7 +22,7 @@ function News() {
     {
       title: 'Come visit us!',
       description:
-        'As December nears, so does the excitement of our holiday market events! Get ready to join us at the Bee Cave Hill Country Galleria. We will be located in the main plaza near the skating rink. <br></br>For those who want to decoden at the market, we are offering discounted rates on select items. Plus, a little reminder: sign up for our newsletter by December 2 to snag a 20% off discount for your market purchases!',
+        'As December nears, so does the excitement of our holiday market events! Get ready to join us at the Bee Cave Hill Country Galleria. We will be located in the main plaza near the skating rink. <br></br>For those who want to decoden at the market, we are offering discounted rates on select items. Sign up for our newsletter <strong>before December 2</strong> to snag a <strong>20% off discount</strong> for your market purchases!',
       date: 'November 25, 2023',
     },
   ];
