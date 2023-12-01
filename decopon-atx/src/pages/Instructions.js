@@ -1,12 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SocialMediaHandles from '../components/social/Handles'
-
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
 
 const Instructions = () => {
   const tiktokHandle = 'decoponatx';
   const instagramHandle = 'decoponatx';
 
+  const [expanded, setExpanded] = useState(false);
+
+  const handleToggle = () => setExpanded(!expanded);
+  const closeMenu = () => setExpanded(false);
+  
   return (
+    <>
+        <Navbar expand="false" style={{ backgroundColor: '#492C28' }} variant="dark" sticky="top" onToggle={handleToggle} expanded={expanded}>
+        <Container>
+          <Navbar.Toggle style={{ marginLeft: 'auto', border: 'none' }} aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ml-auto" style={{ textAlign: 'right', marginRight: '3em' }}>
+              <Nav.Link href='/' to="top" smooth={false} offset={-500} onClick={closeMenu}>
+                <i className="fas fa-arrow-up"></i> Back to Home
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     <div className='component'>
       <div className='title'>
         <h1 className='subtitle'>Instructions and Tips</h1>
@@ -18,9 +38,9 @@ const Instructions = () => {
           <p className='content'>
             While everything might look irresistibly scrumptious, remember it's all for your eyes only, not for tasting! Our faux cream is crafted from air dry clay and glue, and those cute charms are made of resin and/or clay. They're definitely not snackable! We also suggest that artists under 8 have an adult to share in the fun and keep things safe.
             <br></br><br></br>
-            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>Product Use Warning</strong>
+            <span style={{textAlign:'center', display: 'inline-block', width:'100%'}}><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <strong>Product Use Warning </strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span>
             <br></br>
-            All products are for external use only. Do not ingest or consume. Ingestion may cause serious harm.
+            Our products are intended solely for external use. They should not be ingested or consumed under any circumstances, as ingestion can lead to serious harm. We strongly recommend adult supervision, especially when used by children under 8 years old.
           </p>
         </div>
         <div id='iStep2'>
@@ -28,7 +48,7 @@ const Instructions = () => {
           <p className='content'>
             Before diving into your decoden adventure, it's important to set up a comfortable crafting space. A flat surface works best for creating your masterpiece. Don't worry, the cream cleans up easily, but if you're worried about your workspace, consider laying down a placemat for extra protection.
             <br></br><br></br>
-            Finally, take a moment to peek into your kit. Make sure you have your decoden item, cream, additional tips, charms, and a postcard. Each cream bag is ready to go with a piping tip already attached, so you're all set to start your creative journey!
+            Finally, take a moment to peek into your kit. Make sure you have your decoden item, cream, charms, and a postcard. Each cream bag is ready to go with a piping tip already attached, so you're all set to start your creative journey!
           </p>
         </div>
         <div id='iStep3'>
@@ -81,6 +101,7 @@ const Instructions = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

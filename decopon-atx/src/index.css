@@ -122,6 +122,9 @@ a {
   .eventDate {
     font-size: inherit;
   }
+  .table {
+    font-size: 14px; /* Smaller font size for mobile responsiveness */
+  }
 }
 
 .mobileEventDetails {
@@ -170,4 +173,36 @@ a {
 
 .navbar {
   font-family: 'SlowRiver', sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #F9EAD7; /* Light background to match the content area */
+  color: #461F22; /* Dark text color for contrast */
+  font-family: 'Roboto', sans-serif; /* Clean, readable font */
+  margin: 20px 0; /* Spacing for visual separation */
+  border-radius: 8px; /* Rounded corners to match other elements */
+  overflow: hidden; /* Ensures the border-radius clips the table content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+table th, table td {
+  padding: 12px 15px; /* Comfortable spacing within cells */
+  text-align: left; /* Align text to the left for readability */
+  border-bottom: 1px solid #ddd; /* Subtle line for separating rows */
+}
+
+table th {
+  background-color: #FEA751; /* Header background to match the title bar */
+  color: white; /* White text for contrast */
+  font-family: 'SlowRiver', sans-serif; /* Consistent font with title */
+}
+
+table tr:last-child {
+  border-bottom: none; /* Remove bottom border from the last row */
+}
+
+table tr:hover {
+  background-color: #FFC995; /* Slight highlight on hover for interactivity */
 }

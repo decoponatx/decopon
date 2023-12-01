@@ -9,6 +9,7 @@ import EventCalendar from '../components/Events';
 import Contact from '../components/Contact';
 import News from '../components/News';
 
+
 const Home = () => {
   const [expanded, setExpanded] = useState(false);
 
@@ -30,6 +31,12 @@ const Home = () => {
               </Nav.Link>
               <Nav.Link as={Link} to="events" smooth={false} offset={-200} onClick={closeMenu}>
                 Events
+              </Nav.Link>
+              <Nav.Link href='/parties' onClick={closeMenu}>
+                Party with Decopon
+              </Nav.Link>
+              <Nav.Link href='/instructions' onClick={closeMenu}>
+                How to Decoden
               </Nav.Link>
               <Nav.Link as={Link} to="contact" smooth={false} offset={-200} onClick={closeMenu}>
                 Contact Us

@@ -5,6 +5,7 @@ import Instructions from './pages/Instructions';
 import FourOhFour from './pages/404';
 import EventCalendar from './components/Events';
 import News from './components/News';
+import Parties from './pages/Parties';
 
 export const List = () => {
     return (
@@ -15,6 +16,8 @@ export const List = () => {
                 <Route path='/news' element={<News />} />
                 <Route path='/events' element={<EventCalendar />} />
                 <Route path="*" element={<FourOhFour />} />
+                <Route path="/parties" element={<Parties />} />
+
             </Routes>
         </Router>
     );
