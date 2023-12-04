@@ -2,6 +2,7 @@ import React, { useState }  from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import Email from '../components/social/Email';
 
 const Parties = () => {
     const [expanded, setExpanded] = useState(false);
@@ -83,6 +84,7 @@ const Parties = () => {
                 <div className='subComponent'>Contact Us!</div>
                 <div className='content'>
                 For inquiries or to book one of our packages, please contact us at hello@decoponatx.com. We're eager to help with your party planning and ensure your event is a success.
+                <Email></Email>
                 </div>
             </div>
         </div>
