@@ -52,12 +52,8 @@ const Parties = () => {
                 <div className='subComponent'>Packages</div>
                 <p className='content'>
                     Each package is tailored for 10 guests, with additional charges varying by package for extra attendees. All options include an extensive charm bar, a diverse range of faux cream colors, and setup and teardown services. 
-                    <br></br><br></br>
-                    For those interested in the Bespoke package, we recommend booking at least two months in advance. For all other packages, we require advance bookings of 2 weeks. 
-                    <br></br><br></br>
-                    To secure your booking, a 25% non-refundable deposit is required. We recognize that plans can change, so we provide the flexibility to reschedule without any additional cost, provided we receive at least one week's notice. For cancellations within the final week, a rebooking fee of $50 will apply for scheduling a new date. In cases where rescheduling is not possible, a charge of 25% of the remaining balance will be incurred.
-                </p>
-                <table>
+                    <br></br>
+                    <table>
                     <thead>
                         <tr>
                             <th>Package Name</th>
@@ -77,6 +73,13 @@ const Parties = () => {
                         ))}
                     </tbody>
                 </table>
+                <br></br>
+                    For those interested in the Bespoke package, we recommend booking at least two months in advance. For all other packages, we require advance bookings of 2 weeks. To secure your booking, a <strong>25% non-refundable deposit</strong> is required. 
+                    <br></br><br></br>
+                    
+                    <strong>Cancellation Policy: </strong>We recognize that plans can change, so we provide the flexibility to reschedule without any additional cost, provided we receive at least one week's notice. For cancellations within the final week, a rebooking fee of $50 will apply for scheduling a new date. In cases where rescheduling is not possible, a charge of 25% of the remaining balance will be incurred.
+                </p>
+                
                 <div className='subComponent'>Contact Us!</div>
                 <div className='content'>
                 For inquiries or to book one of our packages, please contact us at hello@decoponatx.com. We're eager to help with your party planning and ensure your event is a success.
