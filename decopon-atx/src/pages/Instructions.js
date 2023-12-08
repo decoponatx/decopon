@@ -3,16 +3,18 @@ import SocialMediaHandles from '../components/social/Handles'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import YouTubeEmbed from '../components/social/Youtube';
 
 const Instructions = () => {
   const tiktokHandle = 'decoponatx';
   const instagramHandle = 'decoponatx';
+  const youtubeVideoId = 'BWwBPJpPkiU';
 
   const [expanded, setExpanded] = useState(false);
 
   const handleToggle = () => setExpanded(!expanded);
   const closeMenu = () => setExpanded(false);
-  
+
   return (
     <>
         <Navbar expand="false" style={{ backgroundColor: '#492C28' }} variant="dark" sticky="top" onToggle={handleToggle} expanded={expanded}>
@@ -33,6 +35,9 @@ const Instructions = () => {
       </div>
       <div className='content'>
         <p style={{ padding: 10 }}>If you're new to decoden, here's a little guide to sprinkle some magic on your first adventure!</p>
+        <div>
+      <YouTubeEmbed videoId={youtubeVideoId} />
+    </div>
         <div id='iStep1'>
           <div className='subComponent'>Step 1 - Safety First!</div>
           <p className='content'>

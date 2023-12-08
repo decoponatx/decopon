@@ -14,16 +14,16 @@ function News() {
 
   const newsData = [
     {
+      title: 'Have an Event or Party?',
+      description:
+        "Do you have an event or party coming up and want to do something different? Check out our party package details <a href='https://www.decoponatx.com/parties' target='_blank'>here</a>! Don't forget to visit us at our booth at the Hill Country Holiday Market this weekend. We are located on the lawn right by the League.",
+      date: 'December 8, 2023',
+    },
+    {
       title: 'Shop is now OPEN!',
       description:
         'Exciting news – our online store is now open, right on time for your holiday shopping spree! Check it out <a href="https://shop.decoponatx.com/" target="_blank">here</a>. <br></br>Planning to surprise your loved ones? Make sure to place your orders by December 15th for economy shipping, or by December 20th if you are opting for expedited shipping. Plus, all orders are prepped and primed for gifting – making your holiday surprises even more special! ',
       date: 'November 27, 2023',
-    },
-    {
-      title: 'Come visit us!',
-      description:
-        'As December nears, so does the excitement of our holiday market events! Get ready to join us at the Bee Cave Hill Country Galleria. We will be located in the main plaza near the skating rink. <br></br>For those who want to decoden at the market, we are offering discounted rates on select items. Sign up for our newsletter <strong>before December 2</strong> to snag a <strong>20% off discount</strong> for your market purchases!',
-      date: 'November 25, 2023',
     },
   ];
 
