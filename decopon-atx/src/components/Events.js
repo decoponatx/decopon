@@ -4,9 +4,7 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 
 const EventCalendar = () => {
   const data = [
-    { id: 1, eventDate: 'Saturday December 9, 2023', eventLocation: 'Hill Country Galleria', eventTime:'11a - 7p', date: '2023-12-02', eventPhoto:'../../img/event0.png', googleMap: 'https://maps.app.goo.gl/uWZRdbxofoviGrCt6', eventName: 'Bee Cave Holiday Arts Market', eventWeb:'https://www.hillcountrygalleria.com/event/holiday-arts-market/2145578344', blurb: 'We are happy to be returning to the market this weekend! Thanks for all your support and we hope to see you there!' },
-    { id: 2, eventDate: 'Saturday December 16, 2023', eventLocation: 'Hill Country Galleria', eventTime:'11a - 7p', date: '2023-12-16', eventPhoto:'../../img/event1.png', googleMap: 'https://maps.app.goo.gl/uWZRdbxofoviGrCt6', eventName: 'Bee Cave Holiday Arts Market', eventWeb:'https://www.hillcountrygalleria.com/event/holiday-arts-market/2145578344', blurb: 'Make sure to swing by our booth for an exciting decoden experience and grab a kit at a special discount!' },
-    { id: 3, eventDate: 'Saturday December 23, 2023',eventLocation: 'Hill Country Galleria', eventTime:'11a - 7p', date: '2023-12-23', eventPhoto:'../../img/event2.png', googleMap: 'https://maps.app.goo.gl/uWZRdbxofoviGrCt6' , eventName: 'Bee Cave Holiday Arts Market', eventWeb:'https://www.hillcountrygalleria.com/event/holiday-arts-market/2145578344', blurb: 'Wrap up your festive shopping spree by visiting our booth for the perfect holiday presents.' }
+    // { id: 1, eventDate: 'Saturday December 9, 2023', eventLocation: 'Hill Country Galleria', eventTime:'11a - 7p', date: '2023-12-02', eventPhoto:'../../img/event0.png', googleMap: 'https://maps.app.goo.gl/uWZRdbxofoviGrCt6', eventName: 'Bee Cave Holiday Arts Market', eventWeb:'https://www.hillcountrygalleria.com/event/holiday-arts-market/2145578344', blurb: 'We are happy to be returning to the market this weekend! Thanks for all your support and we hope to see you there!' },
   ];
 
   return (

@@ -14,6 +14,11 @@ function News() {
 
   const newsData = [
     {
+      description:
+        'Thanks to everyone who came out to every single event this past December. We appreciate you! <br></br>Keep checking back for our upcoming future events. We have also updated our store with new stock and charms! Be sure to check it out <a href="https://shop.decoponatx.com/" target="_blank">here</a>.<br></br>Hope you have a happy new year! We will see you in 2024.',
+      date: 'December 27, 2023',
+    },
+    {
       title: 'Have an Event or Party?',
       description:
         "Do you have an event or party coming up and want to do something different? Check out our party package details <a href='https://www.decoponatx.com/parties' target='_blank'>here</a>! Don't forget to visit us at our booth at the Hill Country Holiday Market this weekend. We are located on the lawn right by the League.",
