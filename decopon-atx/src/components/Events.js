@@ -1,11 +1,138 @@
-import React from 'react';
-import 'add-to-calendar-button-react'; 
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import React, { useState, useEffect, useRef } from 'react';
+import 'add-to-calendar-button-react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { Calendar, momentLocalizer } from 'react-big-calendar';
+import moment from 'moment';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+
+const localizer = momentLocalizer(moment);
+const formatTime = (date) => {
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  return `${hours}:${minutes}`;
+};
+
+const CustomToolbar = ({ onNavigate, label }) => {
+  return (
+    <div className="rbc-toolbar">
+      <span className="rbc-btn-group">
+        <button type="button" onClick={() => onNavigate('PREV')}>Back</button>
+        <button type="button" onClick={() => onNavigate('TODAY')}>Today</button>
+        <button type="button" onClick={() => onNavigate('NEXT')}>Next</button>
+      </span>
+      <br></br>
+      <span className="rbc-toolbar-label"><strong>{label}</strong></span>
+    </div>
+  );
+};
+
+const AddToCalendarButtonComponent = ({ event }) => {
+  if (!event) return null;
+
+  const startTime = formatTime(event.start);
+  const endTime = formatTime(event.end);
+
+  return (
+    <add-to-calendar-button
+      name={event.desc}
+      startDate={event.date}
+      startTime={startTime}
+      endTime={endTime}
+      timeZone="America/Chicago"
+      location={event.address}
+      options="iCal"
+      lightMode="bodyScheme"
+      hideCheckmark={true}
+      hideBackground={true}
+      buttonStyle="round"
+      iCalFileName="decopon-event"
+      styleLight="--btn-background: #FEA751; --btn-text: #fff; --font: 'SlowRiver', sans-serif;"
+    />
+  );
+};
+
 
 const EventCalendar = () => {
-  const data = [
-    // { id: 1, eventDate: 'Saturday December 9, 2023', eventLocation: 'Hill Country Galleria', eventTime:'11a - 7p', date: '2023-12-02', eventPhoto:'../../img/event0.png', googleMap: 'https://maps.app.goo.gl/uWZRdbxofoviGrCt6', eventName: 'Bee Cave Holiday Arts Market', eventWeb:'https://www.hillcountrygalleria.com/event/holiday-arts-market/2145578344', blurb: 'We are happy to be returning to the market this weekend! Thanks for all your support and we hope to see you there!' },
+
+  const myEvents = [
+    {
+      id: 1,
+      title: 'North Austin Food and Artisan Market',
+      date: '2024-02-24',
+      start: new Date('2024-02-24T10:00:00-06:00'),
+      end: new Date('2024-02-24T14:00:00-06:00'),
+      location: 'The Arboretum',
+      address: '10000 Research Blvd., Austin, TX 78759',
+      desc: 'Decopon at the Arboretum',
+      googleMap: 'https://maps.app.goo.gl/SxVmRTEu66Q3qFmx6'
+    },
+    {
+      id: 2,
+      title: 'North Austin Food and Artisan Market',
+      date: '2024-03-02',
+      start: new Date('2024-03-02T10:00:00-06:00'),
+      end: new Date('2024-03-02T14:00:00-06:00'),
+      location: 'The Arboretum',
+      address: '10000 Research Blvd., Austin, TX 78759',
+      desc: 'Decopon at the Arboretum',
+      googleMap: 'https://maps.app.goo.gl/SxVmRTEu66Q3qFmx6'
+    },
+    {
+      id: 3,
+      title: 'North Austin Food and Artisan Market',
+      date: '2024-03-16',
+      start: new Date('2024-03-16T10:00:00-06:00'),
+      end: new Date('2024-03-16T14:00:00-06:00'),
+      location: 'The Arboretum',
+      address: '10000 Research Blvd., Austin, TX 78759',
+      desc: 'Decopon at the Arboretum',
+      googleMap: 'https://maps.app.goo.gl/SxVmRTEu66Q3qFmx6'
+    },
+    {
+      id: 4,
+      title: 'North Austin Food and Artisan Market',
+      date: '2024-03-23',
+      start: new Date('2024-03-23T10:00:00-06:00'),
+      end: new Date('2024-03-23T14:00:00-06:00'),
+      location: 'The Arboretum',
+      address: '10000 Research Blvd., Austin, TX 78759',
+      desc: 'Decopon at the Arboretum',
+      googleMap: 'https://maps.app.goo.gl/SxVmRTEu66Q3qFmx6'
+    },
+    {
+      id: 5,
+      title: 'North Austin Food and Artisan Market',
+      date: '2024-03-30',
+      start: new Date('2024-03-30T10:00:00-06:00'),
+      end: new Date('2024-03-30T14:00:00-06:00'),
+      location: 'The Arboretum',
+      address: '10000 Research Blvd., Austin, TX 78759',
+      desc: 'Decopon at the Arboretum',
+      googleMap: 'https://maps.app.goo.gl/SxVmRTEu66Q3qFmx6'
+    }
   ];
+
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const eventDetailsRef = useRef(null); // Ref for the event details div
+
+  const handleEventSelect = (event) => {
+    setSelectedEvent(event);
+  };
+
+  const handleClickOutside = (event) => {
+    if (eventDetailsRef.current && !eventDetailsRef.current.contains(event.target)) {
+      setSelectedEvent(null); // Close event details if click is outside
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener when the component is mounted
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      // Remove event listener when the component is unmounted
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <Container>
@@ -13,75 +140,43 @@ const EventCalendar = () => {
         <Col className="title">
           <h1 className='subtitle'>Events</h1>
         </Col>
-        {data.map((row) => (
-          <Row className="content" key={row.id}>
-              <span className='eventDate'>{row.eventDate}</span>
-            <Row className='webEventDetails'>
-              <Col xs={6}>
-                <Image className='eventPhoto' src={row.eventPhoto}></Image>
-              </Col>
-              <Col xs={6}>
-                <strong>{row.eventName}</strong>
-                <br></br>
-                <em>{row.blurb} <a href={row.eventWeb} target='_blank' className='eventWeb' rel='noreferrer'>(more info)</a></em>
-                <br></br>
-                <strong>Location: </strong><a href={row.googleMap} target='_blank' rel='noreferrer'>{row.eventLocation}</a>
-                <br></br>
-                <strong>Time: </strong>{row.eventTime}<br></br>
-              <Row align='center'>
-              <add-to-calendar-button
-                  name="Visit the Decopon Booth at the Bee Cave Holiday Arts Market"
-                  startDate={row.date}
-                  startTime="11:00"
-                  endTime="19:00"
-                  timeZone="America/Chicago"
-                  location="12700 Hill Country Blvd, Bee Cave, TX 78738"
-                  description={row.eventWeb}
-                  options="iCal"
-                  lightMode="bodyScheme"
-                  hideCheckmark={true}
-                  hideBackground={true}
-                  buttonStyle="round"
-                  iCalFileName="decopon-event"
-                  styleLight="--btn-background: #FEA751; --btn-text: #fff; --font: 'SlowRiver', sans-serif;"
-                />
+        <Row className='content'>
+          <Calendar
+            localizer={localizer}
+            events={myEvents}
+            startAccessor="start"
+            endAccessor="end"
+            onSelectEvent={handleEventSelect}
+            style={{ height: 500, width: '100%' }}
+            components={{ toolbar: CustomToolbar }}
+          />
+
+          {selectedEvent && (
+            <>
+              <Row ref={eventDetailsRef} className="content" key={selectedEvent.id}>
+                <span className='eventDate'>{selectedEvent.title}</span>
+                <Row className='webEventDetails'>
+                  <strong>Location: </strong><a href={selectedEvent.googleMap} target='_blank' rel='noreferrer'>{selectedEvent.location}</a>
+                  <br></br>
+                  <strong>Time: </strong> <span>{selectedEvent.start.toLocaleTimeString()} - {selectedEvent.end.toLocaleTimeString()}</span><br></br>
+                  <Row align='center'>
+                    <AddToCalendarButtonComponent event={selectedEvent} />
+                  </Row>
                 </Row>
-              </Col>
-            </Row>
-            <Row className='mobileEventDetails' style={{display: 'none'}}>
-              <div>
-              <Image className='eventPhoto' src={row.eventPhoto}></Image>
-              </div>
-              <div>
-              <strong><a href={row.eventWeb} target='_blank' rel='noreferrer'>{row.eventName}</a></strong>
-                <br></br>
-                <em>{row.blurb}</em>
-                <br></br><br></br>
-                <strong>Location: </strong><a href={row.googleMap} target='_blank' rel='noreferrer'>{row.eventLocation}</a>
-                <br></br>
-                <strong>Time: </strong>{row.eventTime}<br></br>
-              </div>
-              <div> 
-              <add-to-calendar-button
-                  name="Visit the Decopon Booth at the Bee Cave Holiday Arts Market"
-                  startDate={row.date}
-                  startTime="11:00"
-                  endTime="19:00"
-                  timeZone="America/Chicago"
-                  location="12700 Hill Country Blvd, Bee Cave, TX 78738"
-                  description={row.eventWeb}
-                  options="iCal"
-                  lightMode="bodyScheme"
-                  hideCheckmark={true}
-                  hideBackground={true}
-                  buttonStyle="round"
-                  iCalFileName="decopon-event"
-                  styleLight="--btn-background: #FEA751; --btn-text: #fff; --font: 'SlowRiver', sans-serif;"
-                />
-                </div>
-            </Row>
-            </Row>
-        ))}
+                <Row className='mobileEventDetails' style={{ display: 'none' }}>
+                  <div>
+                    <strong>Location: </strong><a href={selectedEvent.googleMap} target='_blank' rel='noreferrer'>{selectedEvent.location}</a>
+                    <br></br>
+                    <strong>Time: </strong> {selectedEvent.start.toLocaleTimeString()} - {selectedEvent.end.toLocaleTimeString()}<br></br>
+                  </div>
+                  <div>
+                    <AddToCalendarButtonComponent event={selectedEvent} />
+                  </div>
+                </Row>
+              </Row></>
+          )}
+        </Row>
+
       </Row>
     </Container>
   );
