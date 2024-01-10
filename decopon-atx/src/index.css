@@ -25,7 +25,6 @@ code {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   margin: 20px auto;
-  max-width: 600px;
 }
 
 .title {
@@ -109,6 +108,10 @@ a {
   }
   .eventDate {
     font-size: x-large;
+  }
+  .component {
+    max-height: 655px;
+    overflow-y: auto;
   }
 }
 
@@ -205,4 +208,17 @@ table tr:last-child {
 
 table tr:hover {
   background-color: #FFC995; /* Slight highlight on hover for interactivity */
+}
+
+.sliderImage {
+  display: block; /* Removes default inline behavior */
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 100%; /* Ensures the image is responsive and doesn't overflow its container */
+  height: auto;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* This vertically centers the image if needed */
 }

@@ -4,11 +4,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import EventCalendar from '../components/Events';
 import Contact from '../components/Contact';
 import News from '../components/News';
-
+import MyCarousel from '../components/Carousel';
 
 const Home = () => {
   const [expanded, setExpanded] = useState(false);
@@ -65,11 +66,16 @@ const Home = () => {
           <a href="https://shop.decoponatx.com/" target="_blank" rel="noreferrer">
             --&gt;SHOP NOW OPEN!&lt;--
           </a>
+        </Row>  
+        <MyCarousel></MyCarousel>
+        <Row>
+          <Col>
+          <News></News>
+          </Col>
+          <Col>
+          <EventCalendar></EventCalendar>
+          </Col>
         </Row>
-        <Row id='news'></Row>
-        <News></News>
-        <Row id='events'></Row>
-        <EventCalendar></EventCalendar>
         <Row id='contact'></Row>
         <Contact></Contact>
         <footer>
