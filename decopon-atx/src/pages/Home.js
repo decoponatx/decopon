@@ -10,6 +10,9 @@ import EventCalendar from '../components/Events';
 import Contact from '../components/Contact';
 import News from '../components/News';
 import MyCarousel from '../components/Carousel';
+import EmailForm from '../components/EmailForm';
+import About from '../components/About';
+// import BannerAd from '../components/Banner';
 
 const Home = () => {
   const [expanded, setExpanded] = useState(false);
@@ -27,10 +30,10 @@ const Home = () => {
               <Nav.Link href='https://shop.decoponatx.com' target='_blank' rel='noreferrer' onClick={closeMenu}>
                 SHOP!
               </Nav.Link>
-              <Nav.Link as={Link} to="news" smooth={false} offset={-200} onClick={closeMenu}>
+              <Nav.Link as={Link} to="info" smooth={false} offset={-200} onClick={closeMenu}>
                 News and Updates
               </Nav.Link>
-              <Nav.Link as={Link} to="events" smooth={false} offset={-200} onClick={closeMenu}>
+              <Nav.Link as={Link} to="info" smooth={false} offset={-200} onClick={closeMenu}>
                 Events
               </Nav.Link>
               <Nav.Link href='/parties' onClick={closeMenu}>
@@ -68,7 +71,8 @@ const Home = () => {
           </a>
         </Row>  
         <MyCarousel></MyCarousel>
-        <Row>
+        {/* <BannerAd></BannerAd> */}
+        <Row id='info'>
           <Col>
           <News></News>
           </Col>
@@ -76,8 +80,17 @@ const Home = () => {
           <EventCalendar></EventCalendar>
           </Col>
         </Row>
-        <Row id='contact'></Row>
-        <Contact></Contact>
+        <Row id='contact'>
+          <Col>
+          <About></About>
+          </Col>
+          <Col>
+          <Contact></Contact>
+          </Col>
+          <Col>
+          <EmailForm></EmailForm>
+          </Col>
+        </Row>
         <footer>
           <Row className="copyright">
             <p>
